@@ -1,8 +1,8 @@
-import React from 'react';
-
-import {SafeAreaView, Text} from 'react-native';
-import {NavigationContainer, StackRouter} from '@react-navigation/native';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+
 import Home from './components/Home';
 import Details from './components/Details';
 
@@ -15,12 +15,16 @@ const App = () => {
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{headerShown: false}}
+          options={{
+            headerShown: false,
+          }}
         />
         <Stack.Screen
           name="Details"
           component={Details}
-          options={{headerShown: false}}
+          options={{
+            headerShown: false,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
